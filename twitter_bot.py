@@ -20,7 +20,7 @@ while True:
 
       try:
         print("contribution数:0ってどういうことですか?????????????進捗出してください\n" + tmp + str(id))
-        time.sleep(86400) #だいたい1日待つ
+        time.sleep(86000) #だいたい1日待つ
 
         api.update_status("contribution数:0ってどういうことですか?????????????進捗出してください\n" + tmp + str(id))
 
