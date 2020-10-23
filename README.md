@@ -10,7 +10,7 @@
 # Installation
  
 ```bash
-$ pip install tweepy
+$ pip3 install tweepy
 ```
 # Important points
 key.py must be run with your API key and an access token
