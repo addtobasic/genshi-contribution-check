@@ -7,11 +7,12 @@ auth.set_access_token(ACCESS_TOKEN_KEY,ACCESS_TOKEN_SECRET)
 api = tweepy.API(auth)
 
 tmp = 'https://twitter.com/genshi0916/status/'
+
 while True:
   now = datetime.datetime.now()
-  # print(str(now.hour)+":"+str(now.minute)+" "+str(now.second))
+  print(str(now.hour)+":"+str(now.minute)+" "+str(now.second))
   if now.hour == 0 and now.minute == 15 and now.second == 0:
-    for tweet in tweepy.Cursor(api.search, q='genshi0916 contribution 0 '+str(now.day)).items(1):
+    for tweet in tweepy.Cursor(api.search, q='genshi0916 contribution 0 '+str(now.day-1)).items(1):
       id = tweet.id
       # user_name = tweet.user.screen_name
       # tmp = 'https://twitter.com/'+user_name+'/status/'
